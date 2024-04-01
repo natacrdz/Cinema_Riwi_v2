@@ -1,0 +1,289 @@
+:root{
+    --color-principal:#F30606;
+    --color-texto-negro:#000;
+    --color-texto-blanco:#fff;
+    --color-texto-gris:#848080;
+    --color-fondo-pelicula: #faebd7;
+    --ancho-maximo-seccion:1200px;
+}
+/******************Reseteo******************/
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+    box-sizing:inherit;
+}
+
+body{
+    margin:0;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/******************Estilos Generales******************/
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--ancho-maximo-seccion);
+}
+
+/******************Estilos Header******************/
+.buscador{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.buscador input{
+    border:none;
+    border-radius: 1rem;
+    height: 1.5rem;
+}
+
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--color-texto-blanco);
+    height: 7rem;
+    padding: 1rem 5rem;
+    color:var(--color-principal);
+    
+}
+
+.cabecera-contenedor-vacio{
+    background-color: var(--color-principal);
+    max-width: 100%;
+    height: 3rem;
+}
+
+.cabecera-menu-logo{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cabecera-menu-logo img{
+    height: 2.5rem;
+}
+
+.cabecera-navegacion{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cabecera-navegacion a{
+    color: var(--color-texto-gris) ;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.cabecera-navegacion a:hover{
+font-weight: bold;
+color: var(--color-principal);
+}
+
+.cabecera-navegacion ul{
+    list-style-type:none;
+    display: flex;
+    align-items: center;
+    gap:5rem;
+    font-size: 1.2rem;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    margin-bottom: 3rem;
+}
+
+.iconos-menu{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.logo img{
+    width: 4rem;
+    height: 4rem;
+}
+
+/******************Estilos Cartelera******************/
+.boton-comprar{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--color-texto-negro);
+    border: 2px solid var(--color-principal);
+}
+
+.boton-comprar a{
+    text-decoration: none;
+    color: var(--color-texto-negro);
+}
+
+.boton-comprar:hover{
+    color: var(--color-texto-blanco);
+    background-color: var(--color-principal);
+}
+
+.contenedor-pelicula{
+    width: 25rem;
+    height: 47rem;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    background-color: var(--color-fondo-pelicula);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-pelicula img{
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor-peliculas-cartelera{
+    background: linear-gradient(to bottom right,#DA1C1C,#C72A2A, #7A6E6E , #444040, #141212,#0A0101);
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.contenedor-peliculas-estrenos{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.informacion-pelicula{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.informacion-pelicula h3{
+    font-size: 1.2rem;
+    margin:0;
+}
+
+.informacion-pelicula p{
+  margin: 0.5rem 0rem;
+  font-size: 0.8rem;
+}
+.parrafo-recomendacion{
+    text-align: center;
+    border-radius: 1rem;
+    background-color: var(--color-texto-gris);
+    padding: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/******************Estilos Formulario******************/
+
+.contacto{
+    padding-top: 0;
+}
+
+.contacto-formulario{
+    background-color: var(--color-fondo-pelicula);
+    border:thin solid var(--color-texto-negro);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    width: 80%;
+    border:thin solid var(--color-texto-negro);
+}
+
+.contacto-formulario > *{
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding:0.5rem;
+    border-radius: 0.25rem;
+
+}
+
+.contacto-formulario input[type="submit"]{
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    background-color: var(--color-principal);
+    color: var(--color-texto-blanco);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.contacto-formulario input[type="submit"]:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.contacto-formulario textarea{
+    resize: none;
+}
+
+/******************Estilos Pie de Página******************/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-texto-negro);
+    height: 7rem;
+    color:var(--color-texto-blanco);
+}
+
+footer a{
+    color:var(--color-texto-blanco)
+}
+
+footer aside{
+    display: flex;
+    gap: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
